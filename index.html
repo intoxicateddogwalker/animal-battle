@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Animal Battle with Lloyd</title>
+<link rel="stylesheet" href="styles.css">
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+<body>
+<main class="wrap">
+
+  <header>
+    <p class="kicker">LLOYD vs THE BIOLOGICAL BEING</p>
+    <h1>Animal Battle with Lloyd</h1>
+    <p class="tagline">The animal card game. You play in chat. Lloyd learns from every game.</p>
+  </header>
+
+  <figure class="hero">
+    <img src="assets/battle.gif" alt="Animal battle game — a robot-and-human boy watches a bear and a wolf battle on a handheld console" width="640" height="360">
+    <figcaption>Animal battle, with Lloyd watching.</figcaption>
+  </figure>
+
+  <a class="play" href="https://t.me/Rantirealbot" id="playBtn">▶ PLAY WITH LLOYD</a>
+  <p class="honest">Games play in chat with the bot. Lloyd learns from every game and earns his +1s. There is no game on this page — this page only opens the chat.</p>
+
+  <section class="board-demo" aria-label="Example board">
+    <p class="sidelabel bb">BIOLOGICAL BEING &mdash; LOST 0/5</p>
+    <div class="row bbrow">
+      <div class="card"><div class="cname">Lion</div><div><div class="cstats">ATK 5</div><div class="cstats">HP 5</div></div></div>
+      <div class="card back"><div class="cname">?</div><div class="cstats">HIDDEN TRAP</div></div>
+    </div>
+    <p class="caption">Example board — how a game looks. Not a real match.</p>
+    <p class="sidelabel ll">LLOYD &mdash; LOST 0/5</p>
+    <div class="row llrow">
+      <div class="card"><div class="cname">Wolf</div><div><div class="cstats">ATK 4</div><div class="cstats">HP 4</div></div></div>
+      <div class="card"><div class="cname">Bear</div><div><div class="cstats">ATK 5</div><div class="cstats">HP 6</div></div></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>How to play</h2>
+    <ol>
+      <li>Tap <strong>PLAY WITH LLOYD</strong>. It opens the chat with the bot.</li>
+      <li>Send <code>/play</code> to start a game.</li>
+      <li>On your turn, tap the buttons to play a card, then tap your animals to attack — or hold back.</li>
+      <li>After the match, Lloyd answers questions the same way, by picking buttons.</li>
+      <li>Please don't start a game while training is running. The bot will say so if training is on.</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>The rules</h2>
+    <ul>
+      <li>Each player starts with 8 cards and draws 1 each turn.</li>
+      <li>Decks have 37 cards: 10 animals, 10 traps, 10 trap removers, 7 vets.</li>
+      <li>Animals have attack (ATK) and health (HP). An animal attacks an enemy animal; the one attacked loses health equal to the attacker's ATK.</li>
+      <li>Lose 5 animals and you lose the match.</li>
+      <li>Trap cards (bear trap, pepper spray) are played face-down. When the enemy attacks, a trap blocks the attack <em>and kills the attacking animal</em>. The trap is then gone.</li>
+      <li>Trap remover cards destroy one face-down trap on the enemy side.</li>
+      <li>Vet cards sit on the field one full round before they can be used. Using one heals one of your animals by 4, up to its full health. The vet card is then gone.</li>
+      <li>If you have no animal on the field and no animal card in your hand, you draw until you find an animal, place it at once, and put the other cards you drew back in the deck and shuffle.</li>
+      <li>One card play per turn. Then each of your field animals may attack once, or hold back.</li>
+      <li>After the match, Lloyd earns +1 when he wins, and +1 for each question he answers right on the first try.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>The animals</h2>
+    <table class="animals">
+      <thead><tr><th>Animal</th><th>ATK</th><th>HP</th></tr></thead>
+      <tbody>
+        <tr><td>Mouse</td><td>1</td><td>2</td></tr>
+        <tr><td>Rabbit</td><td>2</td><td>2</td></tr>
+        <tr><td>Hawk</td><td>3</td><td>2</td></tr>
+        <tr><td>Fox</td><td>3</td><td>3</td></tr>
+        <tr><td>Snake</td><td>4</td><td>3</td></tr>
+        <tr><td>Wolf</td><td>4</td><td>4</td></tr>
+        <tr><td>Bull</td><td>3</td><td>5</td></tr>
+        <tr><td>Lion</td><td>5</td><td>5</td></tr>
+        <tr><td>Tiger</td><td>4</td><td>6</td></tr>
+        <tr><td>Bear</td><td>5</td><td>6</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <figure class="still">
+    <img src="assets/battle.webp" alt="Animal battle game still — the robot-and-human boy beside the handheld console" width="640" height="360" loading="lazy">
+  </figure>
+
+  <footer>
+    <p>Animal Battle with Lloyd — a Telegram Mini App page. The game itself lives in chat with <a href="https://t.me/Rantirealbot">@Rantirealbot</a>.</p>
+  </footer>
+
+</main>
+<script src="app.js"></script>
+</body>
+</html>

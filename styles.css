@@ -1,0 +1,118 @@
+/* Board look reused from the Lloyd match videos: dark table,
+   red Biological Being on top, green Lloyd below, cream cards,
+   face-down traps as "?" card backs. Colors below are fallbacks;
+   app.js overrides --bg/--text/--hint from Telegram theme params
+   when the page runs inside Telegram. */
+
+:root {
+  --bg: #0b0e14;
+  --text: #f2f2f2;
+  --hint: #b8c0cc;
+  --red: #ff3b3b;
+  --red-soft: #ff9a8a;
+  --green: #4caf6d;
+  --green-soft: #8adfa0;
+  --gold: #ffd23b;
+  --card-bg: #f5efe0;
+  --card-ink: #141414;
+  --card-back: #2a2f3a;
+}
+
+* { box-sizing: border-box; margin: 0; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: Verdana, sans-serif;
+  line-height: 1.5;
+}
+
+.wrap {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 24px 20px 48px;
+}
+
+.kicker {
+  color: var(--red);
+  font-size: 14px;
+  letter-spacing: 3px;
+  margin-bottom: 10px;
+}
+
+h1 { font-size: 34px; line-height: 1.2; }
+h2 { font-size: 22px; margin: 34px 0 10px; }
+
+.tagline { color: var(--hint); margin-top: 8px; font-size: 16px; }
+
+.hero { margin: 24px 0 8px; }
+.hero img, .still img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+}
+figcaption { color: var(--hint); font-size: 13px; margin-top: 6px; }
+
+.play {
+  display: block;
+  text-align: center;
+  background: var(--red);
+  color: #fff;
+  font-size: 22px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-decoration: none;
+  padding: 16px 12px;
+  border-radius: 12px;
+  margin: 20px 0 10px;
+}
+.play:active { opacity: 0.85; }
+
+.honest { color: var(--hint); font-size: 14px; }
+
+/* Example board, same classes/shapes as the match videos. */
+.board-demo { margin-top: 34px; }
+.sidelabel { font-size: 15px; letter-spacing: 2px; color: var(--hint); margin: 10px 0 8px; }
+.sidelabel.bb { color: var(--red-soft); }
+.sidelabel.ll { color: var(--green-soft); }
+.row { display: flex; gap: 14px; min-height: 150px; align-items: center; flex-wrap: wrap; }
+.card {
+  width: 132px; height: 150px;
+  background: var(--card-bg); color: var(--card-ink);
+  border-radius: 12px; border-top: 10px solid #888;
+  padding: 12px 10px;
+  display: flex; flex-direction: column; justify-content: space-between;
+}
+.bbrow .card { border-color: #e2574c; }
+.llrow .card { border-color: var(--green); }
+.card.back {
+  background: var(--card-back); color: var(--gold);
+  border: 2px dashed var(--gold);
+  align-items: center; justify-content: center; text-align: center;
+}
+.cname { font-size: 22px; font-weight: bold; text-transform: uppercase; line-height: 1.1; }
+.cstats { font-size: 18px; }
+.caption { font-size: 16px; font-weight: bold; margin: 16px 0 4px; }
+
+ol, ul { padding-left: 22px; }
+li { margin-bottom: 8px; }
+code { font-family: monospace; background: rgba(255,255,255,.08); padding: 1px 6px; border-radius: 6px; }
+
+table.animals { border-collapse: collapse; width: 100%; max-width: 420px; }
+table.animals th, table.animals td {
+  text-align: left; padding: 7px 10px; border-bottom: 1px solid rgba(255,255,255,.14);
+}
+table.animals td:nth-child(2), table.animals td:nth-child(3),
+table.animals th:nth-child(2), table.animals th:nth-child(3) { text-align: right; }
+
+.still { margin-top: 34px; }
+
+footer { margin-top: 36px; color: var(--hint); font-size: 14px; }
+footer a { color: var(--text); }
+
+@media (max-width: 420px) {
+  h1 { font-size: 28px; }
+  .play { font-size: 19px; }
+  .card { width: 118px; height: 140px; }
+}
